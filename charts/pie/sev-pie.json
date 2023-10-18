@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 480,
+    "height": 270,
+    "title": "Number of accidents by Severity",
+    "background": "#fcfcfc",
+    "config": {
+      "view": {
+      "stroke": "transparent"
+      }
+  },
+    "data": {
+        "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/severity-count.csv",
+        "format": {"type": "csv"}
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Count", "type": "quantitative"},
+      "color": {"field": "Severity", "type": "nominal"},
+      "tooltip": [
+        {"field": "Severity", "type": "nominal", "title": "Severity"},
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+    ]
+    }
+}

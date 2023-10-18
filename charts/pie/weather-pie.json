@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 480,
+    "height": 270,
+    "title": "Number of accidents by Weather Type",
+    "background": "#fcfcfc",
+    "config": {
+      "view": {
+      "stroke": "transparent"
+      },
+      "legend": {"orient": "left"}
+  },
+    "data": {
+        "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/weather-count.csv",
+        "format": {"type": "csv"}
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Count", "type": "quantitative"},
+      "color": {"field": "Weather", "type": "nominal"},
+      "tooltip": [
+        {"field": "Weather", "type": "nominal", "title": "Weather Type"},
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+    ]
+    }
+}

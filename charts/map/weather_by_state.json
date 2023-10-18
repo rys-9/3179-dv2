@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 480,
+    "height": 270,
+    "title": "Most Common Weather Types during Accidents",
+    "projection": {"type": "albersUsa"},
+    "background": "#fcfcfc",
+    "config": {
+        "view": {
+        "stroke": "transparent"
+        }
+    },
+  
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/usa_map.json",
+          "format": {"type": "topojson", "feature": "usa_map"}
+        },
+  
+        "transform": [
+            {
+              "lookup": "properties.postal",
+              "from": {
+                "data": {
+                  "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/state-weather.csv",
+                  "format": {"type": "csv"}
+                },
+                "key": "Name",
+                "fields": ["Common_Weather"]
+              }
+            },
+            {
+                "calculate": "if(datum.Common_Weather === null, 'N/A', datum.Common_Weather)",
+                "as": "weather_tooltip"
+            }
+          ],
+  
+  
+        "mark": {
+            "type": "geoshape", 
+            "stroke": "black", 
+            "strokeWidth": 0.5
+        },
+  
+  
+        "encoding": {
+            "color": {
+              "field": "Common_Weather",
+              "type": "nominal",
+              "scale": {
+                "scheme": "tableau10",
+                "domain": [
+                    "Cloudy", "Fair", "Light Precipitation"
+                ]
+              },
+              "title": "Weather Type"
+            },
+  
+            "tooltip": [
+                {"field": "properties.name", "type": "nominal", "title": "State"},
+                {"field": "weather_tooltip", "type": "nominal", "title": "Most Common Weather Type"}
+            ]
+        }
+        
+      }
+      
+    ]
+  }

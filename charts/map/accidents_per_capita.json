@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 270,
+  "title": "Number of Car Accidents per 10M people by State",
+  "projection": {"type": "albersUsa"},
+  "background": "#fcfcfc",
+  "config": {
+      "view": {
+      "stroke": "transparent"
+      },
+      "legend": {"orient": "left"}
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/usa_map.json",
+        "format": {"type": "topojson", "feature": "usa_map"}
+      },
+
+      "transform": [
+          {
+            "lookup": "properties.postal",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/US_Population_2022.csv",
+                "format": {"type": "csv", "parse": {"Population_2022": "number"}}
+              },
+              "key": "Name",
+              "fields": ["Population_2022"]
+            }
+          },
+
+          {
+            "lookup": "properties.postal",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/state-count.csv",
+                "format": {"type": "csv", "parse": {"Population_2022": "number"}}
+              },
+              "key": "State",
+              "fields": ["Total_Accidents"]
+            }
+          },
+
+          {
+            "calculate": "ceil(datum.Total_Accidents / datum.Population_2022 * 10000000)",
+            "as": "accidents_per_10000000"
+          }
+
+        ],
+
+
+
+      "mark": {
+          "type": "geoshape", 
+          "stroke": "black", 
+          "strokeWidth": 0.5
+      },
+
+
+
+      "encoding": {
+          "color": {
+            "field": "accidents_per_10000000",
+            "type": "quantitative",
+            "scale": {
+              "scheme": "blues",
+              "domain": [0, 2700],
+              "zero": true
+            },
+            "title": "Number of accidents"
+          },
+
+          "tooltip": [
+              {"field": "properties.name", "type": "nominal", "title": "State"},
+              {"field": "accidents_per_10000000", "type": "quantitative", "title": "Accidents per 10,000,000", "format": ",d"}
+          ]
+      }
+      
+    }
+    
+  ]
+}

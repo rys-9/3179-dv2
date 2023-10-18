@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="author" content="Nisha Kannapper">
+        <meta name="description" content="FIT3179 DV2">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css" media="all">
+        <title>FIT3179 DV2</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+                
+    </head>
+
+    <body>
+
+        
+
+        <div id="title">
+            <h1>Car Accidents in the USA</h1>
+            <h2>Is there a correlation between the circumstances of car accidents?</h2>
+        </div>
+
+        <div class="page">
+
+            <div class="spacer"></div>
+
+            <div class="container">
+                <div id="map1"></div>
+                <div id="map2"></div>
+            </div>
+
+            <div class="spacer"></div>
+
+
+            <div class="textcontainer">
+                <div class="text">The map on the left is a representation of the number
+                    of car accidents per 10M people that occured in each state in March 2023. California had 
+                    the highest amount of accidents per capita. There are no discernable trends visible on this chart.
+                    <br>
+                    The map on the right shows the most commonly occuring weather condition during car accidents for each state.
+                    The three most common weather conditions were "Fair", "Cloudy", and "Light Precipitation". This seems to suggest
+                    weather conditions are not a major impact on the occurences of car accidents.
+                </div>
+            </div>
+
+
+            <div class="spacer"></div>
+
+            <div class="container">
+                <div id="pie1"></div>
+                <div id="pie2"></div>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="container">
+                <div id="pie3"></div>
+                <div id="pie4"></div>
+            </div>
+
+            <div class="spacer"></div>
+
+
+            <div class="textcontainer">
+                <div class="text">The weather pie chart compares the amount of car accident occurences
+                    using the weather conditions at time of accident. As mentioned previously, the three 
+                    most common weather conditions were "Fair", "Cloudy", and "Light Precipitation",
+                    which reinforces the notion that weather conditions are not a major impact on the occurences of car accidents.
+                    <br>
+                    The severity pie chart shows that only car accidents of severity levels 2 and 4 (on a scale of 1 to 4) were recorded.
+                    <br>
+                    The temperature pie chart shows noticeably more car accidents for the temperature range of 31F to 70F.
+                    However, it is important to note that the dataset consists of records from March 2023, which is early spring in the US.
+                    <br>
+                    The hour of occurrence pie chart is fairly even, and shows no noticeable trends.
+                </div>
+            </div>
+
+
+            <div class="spacer"></div>
+
+            <div class="container">
+                <div id="bar1"></div>
+                
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="container">
+                <div id="bar2"></div>
+            </div>
+
+            <div class="spacer"></div>
+
+
+            <div class="textcontainer">
+                <div class="text">Attempting to contrast both state and weather conditions with severity yields
+                    no new information, and no noticeable trends. These stacked bar charts only reinforce the 
+                    sentiment that both geography and meteorology have limited impact on car accidents.
+                </div>
+            </div>
+
+
+        </div>
+
+        <script type="text/javascript">
+        vegaEmbed('#map1', "./charts/map/accidents_per_capita.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#map2', "./charts/map/weather_by_state.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+
+
+        <script type="text/javascript">
+        vegaEmbed('#pie1', "./charts/pie/weather-pie.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#pie2', "./charts/pie/sev-pie.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#pie3', "./charts/pie/temp-pie.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#pie4', "./charts/pie/hour-pie.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+
+
+        <script type="text/javascript">
+        vegaEmbed('#bar1', "./charts/bar/state-bar.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#bar2', "./charts/bar/weather-bar.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+        
+    </body>
+
+</html>

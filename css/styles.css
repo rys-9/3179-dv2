@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+:root {
+    background-color: #659098;
+    padding: 3em;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefbfb;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefbfb;
+    flex-direction: row;
+    padding: 2px;
+}
+
+.textcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: linear-gradient(0deg, #f2eaea 0%, #e8f1f1 100%);
+}
+
+
+.spacer {
+    height: 2cm;
+    background-color: #fefbfb;
+}
+
+.h_spacer {
+    width: 2px;
+    background-color: #fefbfb;
+}
+
+#title {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    position: static;
+    filter: drop-shadow(0 15px 10px rgba(60, 106, 147, 0.03)) drop-shadow(0 10px 5px rgba(14, 14, 15, 0.08));
+    background: linear-gradient(0deg, #f2eaea 0%, #e8f1f1 100%);
+}
+
+H1 {
+    color: #000000;
+    font-size: 50px;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+}
+
+H2 {
+    color: #2c3538;
+    font-size: 25px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+
+
+.text {
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    padding: 2px;
+    text-align: center;
+    line-height: 0.75cm;
+  }

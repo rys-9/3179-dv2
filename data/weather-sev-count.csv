@@ -1,0 +1,23 @@
+﻿Weather_Condition,Severity,Num_of_Occurrences
+Cloudy,2,11192
+Cloudy,4,306
+Drizzle,2,24
+Drizzle,4,0
+Dust/Fog/Haze/Mist,2,413
+Dust/Fog/Haze/Mist,4,18
+Fair,2,10929
+Fair,4,475
+Hail,2,4
+Hail,4,0
+Heavy Precipitation,2,201
+Heavy Precipitation,4,4
+Light Precipitation,2,3616
+Light Precipitation,4,80
+Rain,2,1038
+Rain,4,5
+Snow,2,26
+Snow,4,0
+Thunderstorm,2,198
+Thunderstorm,4,6
+Wintry Mix,2,90
+Wintry Mix,4,4
