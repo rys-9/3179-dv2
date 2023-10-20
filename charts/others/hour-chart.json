@@ -28,7 +28,7 @@
         "field": "Severity",
         "type": "quantitative",
         "scale": {
-          "domain": [1,4]
+          "domain": [1,2,3,4]
         }
       },
       "x": {
