@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 480,
-    "height": 270,
+    "width": 360,
+    "height": 202.5,
     "title": "Most Common Weather Types during Accidents",
     "projection": {"type": "albersUsa"},
     "background": "#fcfcfc",
@@ -12,8 +12,7 @@
         "orient": "right"
       },
       "view": {
-        "stroke": "transparent",
-        "fill": "lightblue"
+        "stroke": "transparent"
       }
     },
   
