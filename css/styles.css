@@ -75,7 +75,7 @@ H1 {
 }
 
 H2 {
-    color: #2c3538;
+    color: #2a3336;
     font-size: 25px;
     font-family: 'Courier New', monospace;
     font-weight: bold;
@@ -85,7 +85,7 @@ H2 {
 
 .text {
     font-size: 1em;
-    color: #242424;
+    color: #394448;
     font-weight: 300;
     font-family: 'Trebuchet MS', sans-serif;
     width: 50%;
@@ -98,7 +98,7 @@ H2 {
 
 .endtext {
     font-size: 0.75em;
-    color: #303030;
+    color: #475458;
     font-weight: 200;
     font-family: 'Trebuchet MS', sans-serif;
     width: 50%;
