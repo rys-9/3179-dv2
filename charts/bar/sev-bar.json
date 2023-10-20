@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 720,
+    "height": 270,
+    "title": "Number of accidents by State",
+    "config": {
+        "axis": {
+          "labelColor": "#2a3f43",
+          "titleColor": "#2a3f43"
+        },
+        "legend": {
+          "labelColor": "#2a3f43",
+          "titleColor": "#2a3f43",
+          "orient": "bottom"
+        },
+        "view": {
+          "stroke": "transparent"
+        }
+      },
+    "background": "#fcfcfc",
+    "data": {"url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/severity-count.csv"},
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "Count", "type": "quantitative", "axis": {"title": "Number of Accidents"}},
+      "y": {
+        "field": "Severity", 
+        "type": "nominal"
+        },
+    "color": {
+        "field": "Severity", 
+        "type": "nominal", 
+        "scale": {
+            "domain": ["1","2","3","4"],
+            "range": ["#c7aec7", "#1179b0", "#e7ba52", "#ff5c64"]
+        }
+    },
+        "tooltip": [
+        {"field": "Severity", "type": "nominal", "title": "Severity"},
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+    ]
+    }
+      
+  }

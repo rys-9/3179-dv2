@@ -36,12 +36,15 @@
 
             <div class="textcontainer">
                 <div class="text">The map on the left is a representation of the number
-                    of car accidents per 10M people that occured in each state in March 2023. California had 
-                    the highest amount of accidents per capita. There are no discernable trends visible on this chart.
+                    of car accidents per 10M people that occured in each state in March 2023. <b>California</b> had 
+                    the <b>highest</b> amount of accidents per capita. 
+                    <br>
+                    There are <b><u>no discernable trends</u></b> visible on this chart.
                     <br>
                     The map on the right shows the most commonly occuring weather condition during car accidents for each state.
-                    The three most common weather conditions were "Fair", "Cloudy", and "Light Precipitation". This seems to suggest
-                    weather conditions are not a major impact on the occurences of car accidents.
+                    The three most common weather conditions were "<b>Fair</b>", "<b>Cloudy</b>", and "<b>Light Precipitation</b>". 
+                    <br>
+                    This seems to suggest <b><u>weather conditions are not a major impact</u></b> on the occurences of car accidents.
                 </div>
             </div>
 
@@ -56,8 +59,7 @@
             <div class="spacer"></div>
 
             <div class="container">
-                <div id="pie3"></div>
-                <div id="pie4"></div>
+                <div id="hourchart"></div>
             </div>
 
             <div class="spacer"></div>
@@ -83,13 +85,18 @@
 
             <div class="container">
                 <div id="bar1"></div>
-                
             </div>
 
             <div class="spacer"></div>
 
             <div class="container">
                 <div id="bar2"></div>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="container">
+                <div id="bar3"></div>
             </div>
 
             <div class="spacer"></div>
@@ -106,46 +113,47 @@
         </div>
 
         <script type="text/javascript">
-        vegaEmbed('#map1', "./charts/map/accidents_per_capita.json").then(function(result) {
+        vegaEmbed('#map1', "https://raw.githubusercontent.com/rys-9/3179-dv2/main/charts/map/accidents_per_capita.json").then(function(result) {
         }).catch(console.error);
         </script>
 
         <script type="text/javascript">
-        vegaEmbed('#map2', "./charts/map/weather_by_state.json").then(function(result) {
-        }).catch(console.error);
-        </script>
-
-
-
-        <script type="text/javascript">
-        vegaEmbed('#pie1', "./charts/pie/weather-pie.json").then(function(result) {
-        }).catch(console.error);
-        </script>
-
-        <script type="text/javascript">
-        vegaEmbed('#pie2', "./charts/pie/sev-pie.json").then(function(result) {
-        }).catch(console.error);
-        </script>
-
-        <script type="text/javascript">
-        vegaEmbed('#pie3', "./charts/pie/temp-pie.json").then(function(result) {
-        }).catch(console.error);
-        </script>
-
-        <script type="text/javascript">
-        vegaEmbed('#pie4', "./charts/pie/hour-pie.json").then(function(result) {
+        vegaEmbed('#map2', "https://raw.githubusercontent.com/rys-9/3179-dv2/main/charts/map/weather_by_state.json").then(function(result) {
         }).catch(console.error);
         </script>
 
 
 
         <script type="text/javascript">
-        vegaEmbed('#bar1', "./charts/bar/state-bar.json").then(function(result) {
+        vegaEmbed('#pie1', "https://raw.githubusercontent.com/rys-9/3179-dv2/main/charts/pie/weather-pie.json").then(function(result) {
         }).catch(console.error);
         </script>
 
         <script type="text/javascript">
-        vegaEmbed('#bar2', "./charts/bar/weather-bar.json").then(function(result) {
+        vegaEmbed('#pie2', "https://raw.githubusercontent.com/rys-9/3179-dv2/main/charts/pie/temp-pie.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+
+
+        <script type="text/javascript">
+        vegaEmbed('#hourchart', "./charts/others/hour-chart.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+
+        <script type="text/javascript">
+        vegaEmbed('#bar1', "./charts/bar/sev-bar.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#bar2', "https://raw.githubusercontent.com/rys-9/3179-dv2/main/charts/bar/state-bar.json").then(function(result) {
+        }).catch(console.error);
+        </script>
+
+        <script type="text/javascript">
+        vegaEmbed('#bar3', "https://raw.githubusercontent.com/rys-9/3179-dv2/main/charts/bar/weather-bar.json").then(function(result) {
         }).catch(console.error);
         </script>
         

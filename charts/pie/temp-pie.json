@@ -5,13 +5,17 @@
     "title": "Number of accidents by Temperature (F)",
     "background": "#fcfcfc",
     "config": {
-      "view": {
-      "stroke": "transparent"
+      "legend": {
+        "labelColor": "#2a3f43",
+        "titleColor": "#2a3f43",
+        "orient": "right"
       },
-      "legend": {"orient": "left"}
-  },
+      "view": {
+        "stroke": "transparent"
+      }
+    },
     "data": {
-        "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/temp-count.csv",
+        "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/temp-count.csv",
         "format": {"type": "csv"}
     },
     "mark": "arc",

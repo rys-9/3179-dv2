@@ -6,15 +6,20 @@
     "projection": {"type": "albersUsa"},
     "background": "#fcfcfc",
     "config": {
-        "view": {
+      "legend": {
+        "labelColor": "#2a3f43",
+        "titleColor": "#2a3f43",
+        "orient": "right"
+      },
+      "view": {
         "stroke": "transparent"
-        }
+      }
     },
   
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/usa_map.json",
+          "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/usa_map.json",
           "format": {"type": "topojson", "feature": "usa_map"}
         },
   
@@ -23,7 +28,7 @@
               "lookup": "properties.postal",
               "from": {
                 "data": {
-                  "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/state-weather.csv",
+                  "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/state-weather.csv",
                   "format": {"type": "csv"}
                 },
                 "key": "Name",
@@ -49,10 +54,10 @@
               "field": "Common_Weather",
               "type": "nominal",
               "scale": {
-                "scheme": "tableau10",
                 "domain": [
-                    "Cloudy", "Fair", "Light Precipitation"
-                ]
+                    "Cloudy", "Fair", "Light Precipitation","N/A"
+                ],
+                "range": ["#5d5e85", "#ebe4a4", "#8ec3d1", "#333333"]
               },
               "title": "Weather Type"
             },

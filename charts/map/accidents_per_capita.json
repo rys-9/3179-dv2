@@ -6,16 +6,20 @@
   "projection": {"type": "albersUsa"},
   "background": "#fcfcfc",
   "config": {
-      "view": {
+    "legend": {
+      "labelColor": "#2a3f43",
+      "titleColor": "#2a3f43",
+      "orient": "left"
+    },
+    "view": {
       "stroke": "transparent"
-      },
-      "legend": {"orient": "left"}
+    }
   },
 
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/usa_map.json",
+        "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/usa_map.json",
         "format": {"type": "topojson", "feature": "usa_map"}
       },
 
@@ -24,7 +28,7 @@
             "lookup": "properties.postal",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/US_Population_2022.csv",
+                "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/US_Population_2022.csv",
                 "format": {"type": "csv", "parse": {"Population_2022": "number"}}
               },
               "key": "Name",
@@ -36,7 +40,7 @@
             "lookup": "properties.postal",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/state-count.csv",
+                "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/state-count.csv",
                 "format": {"type": "csv", "parse": {"Population_2022": "number"}}
               },
               "key": "State",

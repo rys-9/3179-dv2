@@ -4,13 +4,21 @@
     "height": 270,
     "title": "Number of accidents by Weather Condition",
     "config": {
-        "view": {
+      "axis": {
+        "labelColor": "#2a3f43",
+        "titleColor": "#2a3f43"
+      },
+      "legend": {
+        "labelColor": "#2a3f43",
+        "titleColor": "#2a3f43",
+        "orient": "bottom"
+      },
+      "view": {
         "stroke": "transparent"
-        },
-        "legend": {"orient": "bottom"}
+      }
     },
     "background": "#fcfcfc",
-    "data": {"url": "https://raw.githubusercontent.com/rys-9/fit3179-hw-wk9/main/data/weather-sev-count.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/weather-sev-count.csv"},
     "mark": "bar",
     "encoding": {
       "x": {
@@ -28,7 +36,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["1","2","3","4"],
-          "range": ["#e7ba52", "#ff5c64", "#c7aec7", "#1179b0"]
+          "range": ["#c7aec7", "#1179b0", "#e7ba52", "#ff5c64"]
         },
         "title": "Severity Level"
       },
