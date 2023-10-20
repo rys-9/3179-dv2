@@ -43,7 +43,7 @@
       "tooltip": [
         {"field": "Weather_Condition", "type": "nominal", "title": "Weather"},
         {"field": "Severity", "type": "nominal", "title": "Severity"},
-        {"field": "Num_of_Occurrences", "type": "quantitative", "title": "Number of Accidents"}
+        {"field": "Num_of_Occurrences", "type": "quantitative", "title": "Number of Accidents", "format": ",d"}
     ]
     }
   }

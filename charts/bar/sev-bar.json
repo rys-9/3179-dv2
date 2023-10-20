@@ -36,7 +36,7 @@
     },
         "tooltip": [
         {"field": "Severity", "type": "nominal", "title": "Severity"},
-        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents", "format": ",d"}
     ]
     }
       

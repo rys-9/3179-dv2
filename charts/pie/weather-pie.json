@@ -34,7 +34,7 @@
       },
       "tooltip": [
         {"field": "Weather", "type": "nominal", "title": "Weather Type"},
-        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents", "format": ",d"}
     ]
     }
 }

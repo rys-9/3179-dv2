@@ -24,7 +24,7 @@
       "color": {"field": "Temp", "type": "nominal", "scale": {"scheme": "tableau10"}},
       "tooltip": [
         {"field": "Temp", "type": "nominal", "title": "Temp (F)"},
-        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents", "format": ",d"}
     ]
     }
 }
