@@ -26,7 +26,7 @@
     "encoding": {
       "y": {
         "field": "Severity",
-        "type": "nominal"
+        "type": "quantitative"
       },
       "x": {
         "field": "Hour",
@@ -47,7 +47,7 @@
       },
       "tooltip": [
         {"field": "Hour", "type": "ordinal", "title": "Hour of Occurence"},
-        {"field": "Severity", "type": "nominal", "title": "Severity"},
+        {"field": "Severity", "type": "quantitative", "title": "Severity"},
         {"field": "Num_of_Occurrences", "type": "quantitative", "title": "Number of Accidents", "format": ",d"}
     ]
       
