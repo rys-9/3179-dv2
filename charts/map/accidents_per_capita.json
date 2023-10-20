@@ -19,7 +19,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/usa_map.json",
+        "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/usa_map_topojson.json",
         "format": {"type": "topojson", "feature": "usa_map"}
       },
 
