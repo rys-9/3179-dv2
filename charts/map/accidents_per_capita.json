@@ -28,7 +28,7 @@
             "lookup": "properties.postal",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/US_Population_2022.csv",
+                "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/US_Population.csv",
                 "format": {"type": "csv", "parse": {"Population_2022": "number"}}
               },
               "key": "Name",
