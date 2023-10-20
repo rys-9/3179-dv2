@@ -26,7 +26,10 @@
     "encoding": {
       "y": {
         "field": "Severity",
-        "type": "quantitative"
+        "type": "quantitative",
+        "scale": {
+          "domain": [1,4]
+        }
       },
       "x": {
         "field": "Hour",
