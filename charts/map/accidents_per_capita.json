@@ -19,6 +19,21 @@
   "layer": [
     {
       "data": {
+        "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/ne_50m_ocean.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_50m_ocean"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightblue",
+        "stroke": "lightblue",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
         "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/usa_map_topojson.json",
         "format": {"type": "topojson", "feature": "usa_map"}
       },

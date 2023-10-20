@@ -23,6 +23,7 @@
     background-color: #fefbfb;
     flex-direction: row;
     padding: 2px;
+    width: 100%;
 }
 
 .textcontainer {
@@ -34,10 +35,19 @@
     background: linear-gradient(0deg, #f2eaea 0%, #e8f1f1 100%);
 }
 
+.endtextcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background: linear-gradient(0deg, #dfd4dc 0%, #d3dede 100%);
+}
 
 .spacer {
     height: 2cm;
     background-color: #fefbfb;
+    width: 100%;
 }
 
 .h_spacer {
@@ -75,6 +85,7 @@ H2 {
 
 .text {
     font-size: 1em;
+    color: #242424;
     font-weight: 300;
     font-family: 'Trebuchet MS', sans-serif;
     width: 50%;
@@ -84,3 +95,16 @@ H2 {
     text-align: center;
     line-height: 0.75cm;
   }
+
+.endtext {
+    font-size: 0.75em;
+    color: #303030;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', sans-serif;
+    width: 50%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    padding: 2px;
+    text-align: center;
+    line-height: 0.75cm;
+}
