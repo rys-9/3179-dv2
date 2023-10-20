@@ -21,7 +21,17 @@
     "mark": "arc",
     "encoding": {
       "theta": {"field": "Count", "type": "quantitative"},
-      "color": {"field": "Weather", "type": "nominal"},
+      "color": {"field": "Weather", "type": "nominal", "scale": {
+          "domain": [
+            "Cloudy", "Drizzle", "Fair", "Dust/Fog/Haze/Mist", "Hail", "Heavy Precipitation",
+            "Light Precipitation", "Rain", "Snow", "Thunderstorm", "Wintry Mix"
+          ],
+          "range": [
+            "#7faeea", "#fe1d66", "#f8a395", "#fd5917", "#9f2108", "#11a0aa",
+            "#72e5ef" , "#7c225f", "#fd3fbe", "#1c5b5a", "#6d3918"
+          ]
+        }
+      },
       "tooltip": [
         {"field": "Weather", "type": "nominal", "title": "Weather Type"},
         {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}

@@ -57,7 +57,7 @@
                 "domain": [
                     "Cloudy", "Fair", "Light Precipitation","N/A"
                 ],
-                "range": ["#5d5e85", "#ebe4a4", "#8ec3d1", "#333333"]
+                "range": ["#7faeea", "#f8a395", "#72e5ef", "#333333"]
               },
               "title": "Weather Type"
             },

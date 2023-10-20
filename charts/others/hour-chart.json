@@ -3,6 +3,7 @@
     "width": 720,
     "height": 270,
     "background": "#fcfcfc",
+    "title": "Number of Accidents by Hour of Day",
     "config": {
       "axis": {
         "labelColor": "#2a3f43",
@@ -18,7 +19,7 @@
       }
     },
     "data": {
-        "url": "./data/hour-sev-count.csv",
+        "url": "https://raw.githubusercontent.com/rys-9/3179-dv2/main/data/hour-sev-count.csv",
         "format": {"type": "csv"}
     },
     "mark": "circle",
@@ -43,6 +44,12 @@
           "scheme": "oranges"
         },
         "title": "Number of Accidents"
-      }
+      },
+      "tooltip": [
+        {"field": "Hour", "type": "ordinal", "title": "Hour of Occurence"},
+        {"field": "Severity", "type": "nominal", "title": "Severity"},
+        {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}
+    ]
+      
     }
   }
