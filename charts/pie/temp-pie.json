@@ -21,17 +21,7 @@
     "mark": "arc",
     "encoding": {
       "theta": {"field": "Count", "type": "quantitative"},
-      "color": {"field": "Temp", "type": "nominal", "scale": {
-        "domain": [
-          "(-)9-0", "1-10", "11-20", "21-30", "31-40",
-          "41-50", "51-60", "61-70", "71-80", "81-90"
-          ],
-        "range": [
-          "#2d747a", "#54b2fc", "#8de4d3", "#b9b9b9", "#8f5b73",
-          "#b53c7d" , "#f886bf", "#fb0998", "#ffa270", "#e23209"
-          ]
-        }
-      },
+      "color": {"field": "Temp", "type": "nominal", "scale": {"scheme": "tableau10"}},
       "tooltip": [
         {"field": "Temp", "type": "nominal", "title": "Temp (F)"},
         {"field": "Count", "type": "quantitative", "title": "Number of Accidents"}

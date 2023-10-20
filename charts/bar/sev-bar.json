@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 720,
     "height": 270,
-    "title": "Number of accidents by State",
+    "title": "Number of accidents by Severity",
     "config": {
         "axis": {
           "labelColor": "#2a3f43",
